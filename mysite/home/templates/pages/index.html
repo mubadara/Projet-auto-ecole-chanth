@@ -1,0 +1,26 @@
+<!-- home/templates/home/index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+    <title>Acceuil</title>
+</head>
+<body>
+    {% include   'pages/base.html' %}
+
+    {% block content %}
+    <div id="content">
+        <h2 style="text-align: center;">Presentation</h2>
+        <p style="text-align: center;">Agreable,bienveillant,l'apprentissage de la conduite ne m'as jamais etais aussi familiere</p>
+    </div>
+    <div id="map" style="height: 500px; width: 50%;margin-left: 25%;"></div>
+    <script src="{% static 'js/map.js' %}" ></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgdIhbqqrhO2gHNRsAOX0Ulw4oDlYP8SY&callback=initMap"></script>
+    {% load static %}
+    <p id="address" style="text-align: center;">334 Route de Bethune,Lens,62300</p>
+{% endblock %}
+</body>
+</html>

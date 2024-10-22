@@ -1,0 +1,12 @@
+#Logo {
+    font-family: Brush Script MT, cursive; 
+} 
+
+body {
+    background-image: url(../img/background.png);
+}
+
+#connexion{
+    text-align: right;
+}
+

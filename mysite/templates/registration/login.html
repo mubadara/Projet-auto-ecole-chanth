@@ -1,0 +1,17 @@
+<!-- registration/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>{% include 'pages/base.html' %}
+    <h1 style="text-align: center;">Login</h1>
+    <form method="post" action="{% url 'Chanth:login' %}" style="text-align: center;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" style="text-align: center;">Login</button>
+    </form>
+</body>
+</html>

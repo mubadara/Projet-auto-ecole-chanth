@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mon Agenda</title>
+</head>
+<body>
+    {% include   'pages/base.html' %}
+    <h2 style="text-align: center;">Mon Agenda</h2>
+<ul style="text-align: center;list-style-type:none">
+    {% for event in events %}
+        <li style="background-color: grey;margin: 0 auto">
+            <strong>{{ event.title }}</strong><br>
+            Date: {{ event.date }}<br>
+            Heure: {{ event.start_time }} - {{ event.end_time }}<br>
+            Description: {{ event.description }}<br>
+        </li>
+    {% empty %}
+        <li>Vous n'avez aucun événement prévu.</li>
+    {% endfor %}
+</ul>
+</body>
+</html>

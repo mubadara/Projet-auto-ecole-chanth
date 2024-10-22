@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+    <title>tarif</title>
+</head>
+<body>{% include 'pages/base.html' %}
+
+{% block content %}
+{{ tarifs_json|json_script:"tariff-data" }}
+
+ <section id="tariffs-section" style="text-align: center;">
+        <h1>Tarifs</h1>
+        <div id="tariffs-list"></div>
+    </section>
+
+    <script src="{% static 'js/tarif.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,34 @@
+<!-- home/templates/home/about.html -->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link defer rel="stylesheet" href="{% static 'css/home.css' %}"/>
+        <script src="{% static 'js/about.js' %}" defer></script>
+        <title>Presentation</title>
+    </head>
+<body>{% include 'pages/base.html' %}
+    {% block content %}
+    <section style="text-align: center;">
+       <section>
+        <h2>Presentation</h2>
+        <div id="main-about"></div>
+    </section>
+
+    <section>
+        <h2>Presentation Julien</h2>
+        <div id="about-julien"></div>
+    </section>
+
+    <section>
+        <h2>Presentation Chanth</h2>
+        <div id="about-chanth"></div>
+    </section>
+    </section>
+    <!-- Embed about data as JSON in a script tag -->
+        {{ about_data|json_script:"about-data" }}
+
+
+{% endblock %}

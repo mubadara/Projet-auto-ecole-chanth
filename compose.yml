@@ -1,0 +1,40 @@
+
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: chanth
+      POSTGRES_USER: neyruba
+      POSTGRES_PASSWORD: test12345
+    networks:
+      - app_network
+
+  web:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+      - SECRET_KEY=your_secret_key
+      - DJANGO_ALLOWED_HOSTS=localhost 0.0.0.0 [::1]
+      # - POSTGRES_DB=chanth
+      # - POSTGRES_USER=Neyruba
+      # - POSTGRES_PASSWORD=test12345
+      - DATABASE_URL=postgres://neyruba:test12345@db:5432/chanth
+    depends_on:
+      - db
+    networks:
+      - app_network
+
+volumes:
+  postgres_data:
+
+networks:
+  app_network:

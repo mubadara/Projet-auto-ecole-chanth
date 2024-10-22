@@ -1,0 +1,174 @@
+#map {
+    height: 50%;
+    width: 25%;
+}
+
+html,body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../img/background.png);
+    background-size: cover;
+}
+
+#tariffs-section{
+    text-align: center;
+}
+input[type=text],
+select,
+textarea {
+    width: 50%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+#connexion {
+    text-align: right;
+}
+@media (max-width: 575px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navbar {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .sidebar {
+        display: none;
+        /* Hide sidebar on small screens */
+    }
+
+    .content {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+/* Small Devices (Landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .navbar {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        width: 100%;
+    }
+}
+
+/* Medium Devices (Tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 85%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .navbar {
+        font-size: 18px;
+    }
+
+    .sidebar {
+        width: 30%;
+        float: left;
+    }
+
+    .content {
+        width: 65%;
+        float: right;
+    }
+}
+
+/* Large Devices (Desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    body {
+        font-size: 17px;
+    }
+
+    .container {
+        width: 80%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .navbar {
+        font-size: 20px;
+    }
+
+    .sidebar {
+        width: 25%;
+        float: left;
+    }
+
+    .content {
+        width: 70%;
+        float: right;
+    }
+}
+
+/* Extra Large Devices (Large Desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 75%;
+        padding: 30px;
+        margin: 0 auto;
+    }
+
+    .navbar {
+        font-size: 22px;
+    }
+
+    .sidebar {
+        width: 20%;
+        float: left;
+    }
+
+    .content {
+        width: 75%;
+        float: right;
+    }
+}
