@@ -8,9 +8,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_DB: chanth
-      POSTGRES_USER: neyruba
-      POSTGRES_PASSWORD: test12345
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     networks:
       - app_network
 
@@ -22,12 +22,12 @@ services:
       - "8000:8000"
     environment:
       - DEBUG=1
-      - SECRET_KEY=your_secret_key
+      - SECRET_KEY=${SECRET_KEY}
       - DJANGO_ALLOWED_HOSTS=localhost 0.0.0.0 [::1]
       # - POSTGRES_DB=chanth
       # - POSTGRES_USER=Neyruba
       # - POSTGRES_PASSWORD=test12345
-      - DATABASE_URL=postgres://neyruba:test12345@db:5432/chanth
+      - DATABASE_URL= ${DATABASE_URL}
     depends_on:
       - db
     networks:
