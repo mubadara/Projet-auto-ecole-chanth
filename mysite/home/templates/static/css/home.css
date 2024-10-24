@@ -13,10 +13,6 @@ body{
     background-image: url(../img/background.png);
     background-size: cover;
 }
-
-#tariffs-section{
-    text-align: center;
-}
 input[type=text],
 select,
 textarea {
@@ -37,8 +33,8 @@ textarea {
     resize: vertical
         /* Allow the user to vertically resize the textarea (not horizontally) */
 }
-#connexion {
-    text-align: right;
+.pres {
+    text-align: center;
 }
 @media (max-width: 575px) {
     body {
@@ -48,17 +44,17 @@ textarea {
     .container {
         width: 100%;
         padding: 10px;
+        text-align: center;
     }
-
+    .pres {
+            text-align: center;
+    }
     .navbar {
         font-size: 14px;
         text-align: center;
     }
 
-    .sidebar {
-        display: none;
-        /* Hide sidebar on small screens */
-    }
+
 
     .content {
         margin: 0;
@@ -75,17 +71,16 @@ textarea {
     .container {
         width: 100%;
         padding: 15px;
+        text-align: center;
     }
-
+    .pres {
+        text-align: center;
+    }
     .navbar {
         font-size: 16px;
         text-align: center;
     }
 
-    .sidebar {
-        width: 100%;
-        margin-bottom: 20px;
-    }
 
     .content {
         width: 100%;
@@ -103,14 +98,11 @@ textarea {
         padding: 20px;
         margin: 0 auto;
     }
-
+    .pres {
+        text-align: center;
+    }
     .navbar {
         font-size: 18px;
-    }
-
-    .sidebar {
-        width: 30%;
-        float: left;
     }
 
     .content {
@@ -135,10 +127,6 @@ textarea {
         font-size: 20px;
     }
 
-    .sidebar {
-        width: 25%;
-        float: left;
-    }
 
     .content {
         width: 70%;
@@ -160,11 +148,6 @@ textarea {
 
     .navbar {
         font-size: 22px;
-    }
-
-    .sidebar {
-        width: 20%;
-        float: left;
     }
 
     .content {
