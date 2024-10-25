@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', 'fallback_secret_key')
 DEBUG = True
 ALLOWED_HOSTS = ['*']
-
+api_key = os.getenv('API_KEY')
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # For development
 # For production, use:
@@ -32,6 +32,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # For developm
 ADMIN_EMAIL = 'autoecolechanth@gmail.com'
 DEFAULT_FROM_EMAIL = 'your-email@example.com'
 
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 DATABASES = {
     'default': dj_database_url.config(

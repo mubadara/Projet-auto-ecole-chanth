@@ -9,7 +9,10 @@ from django.core.mail import send_mail
 
 
 def homepage(request):
-    return render(request, 'pages/index.html')
+    context ={
+        'api_key':settings.api_key
+    }
+    return render(request, 'pages/index.html',context)
 
 def about(request):
     about_info = About.objects.first()  # Assuming you have only one About object
