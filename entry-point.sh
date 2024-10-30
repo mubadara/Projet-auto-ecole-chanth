@@ -1,5 +1,5 @@
 #!/bin/sh
-
+# check database availability
 if [ "$DATABASE" = "db" ]; then
     echo "Waiting for database..."
 
