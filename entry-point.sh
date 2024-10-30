@@ -9,7 +9,7 @@ if [ "$DATABASE" = "db" ]; then
 
     echo "Database started"
 fi
-
+# end check of database availability
 # Make migrations and migrate the database.
 echo "Making migrations and migrating the database. "
 python manage.py makemigrations  --noinput 
